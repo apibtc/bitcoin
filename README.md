@@ -145,7 +145,7 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 
      //.
 
-SUBCRIBE ALL TRANSACTIONS OF BITCOIN   // the soon
+SUBCRIBE ALL TRANSACTIONS OF BITCOIN   // open soon
      
      var socket = require("socket.io-client").connect('https://apibtc.herokuapp.com');
                 socket.emit("trans", { name: 'any every thing' });

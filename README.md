@@ -1,5 +1,6 @@
 
-create new wallet bitcoin and privatekey:
+
+
 
 you can post using: axios, ajax, request, reauest-promise, fetch, ....post to url :
 
@@ -8,6 +9,7 @@ EXAMPLE POST WITH AXIOS:
 
 var options = {headers : {'Content-Type': 'application/json'}}
 
+CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
 
      axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'password'}, optopns})
      .then(data=>data.data)
@@ -50,7 +52,7 @@ CHECK BTC WALLET OR TXID
 
 
 
-CHECK WALLET CONFIRM OF TXID ( working if wallet haved txId in to)
+CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
 
      var obj = {wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX'};
 

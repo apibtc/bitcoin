@@ -52,6 +52,8 @@ CHECK BTC WALLET OR TXID
 
 CHECK WALLET CONFIRM OF TXID ( working if wallet haved txId in to)
 
+     var obj = {wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX'};
+
      axios.post('https://apibtc.herokuapp.com/confirm/btc', obj, options })
           .then(data=>data.data)
           .then(data=>{

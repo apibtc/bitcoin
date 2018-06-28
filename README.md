@@ -25,13 +25,13 @@ REGISTER EMAIL AND PASSWORD
 CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
 
      axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'333'}, optopns})
-     .then(data=>data.data)
-     .then(data=>{
-            console.log(data)
-            // create wallet successed  { wallet, privatekey }
-            // your code here with data object
-     })
-    .catch(er=>console.log(er))
+          .then(data=>data.data)
+          .then(data=>{
+                 console.log(data)
+                 // create wallet successed  { wallet, privatekey }
+                 // your code here with data object
+          })
+         .catch(er=>console.log(er))
     
     
     
@@ -120,8 +120,8 @@ SUBCRIBE ALL TRANSACTIONS OF BITCOIN
      var socket = require("socket.io-client").connect('https://apibtc.herokuapp.com');
            socket.emit("trans", { name: 'any every thing' });
            socket.on("trans", data => { 
-               console.log(data)
-               // your code here with data object
+                    console.log(data)
+                    // your code here with data object
            })
       
       

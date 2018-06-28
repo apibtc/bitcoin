@@ -12,11 +12,12 @@ axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, passw
 
 .then(data=>{
 
-console.log(data)
+    console.log(data)
 
-// your code hare with data object
+    // your code hare with data object
 
 })
+
 .catch(er=>console.log(er))
 
 
@@ -36,8 +37,8 @@ axios.post('https://apibtc.herokuapp.com/check/btc', obj, options })
 .then(data=>{
 
 
-console.log(data)
-// your code hare with data object
+      console.log(data)
+      // your code hare with data object
 
 
 })
@@ -59,8 +60,8 @@ axios.post('https://apibtc.herokuapp.com/confirm/btc', obj, options })
 
 .then(data=>{
 
-console.log(data)
-// your code hare with data object
+      console.log(data)
+      // your code hare with data object
 
 })
 

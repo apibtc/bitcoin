@@ -8,17 +8,17 @@ var options = {headers : {'Content-Type': 'application/json'}}
 
 axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'password'}, optopns})
 
-.then(data=>data.data)
+     .then(data=>data.data)
 
-.then(data=>{
+     .then(data=>{
 
-    console.log(data)
+            console.log(data)
 
-    // your code hare with data object
+            // your code hare with data object
 
 })
 
-.catch(er=>console.log(er))
+    .catch(er=>console.log(er))
 
 
 

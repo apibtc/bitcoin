@@ -10,8 +10,11 @@ EXAMPLE POST WITH AXIOS:
 var options = { headers : { 'Content-Type': 'application/json' }};
 
 REGISTER EMAIL AND PASSWORD
-
-     axios.post('https://apibtc.herokuapp.com/login', { email: email@email.com, password: '333' }, optopns })
+   
+     var dev = { email: email@email.com, password: '333' };
+     var url1 = 'https://apibtc.herokuapp.com/login';
+     
+     axios.post(url1, dev, optopns })
           .then(data => data.data)
           .then(data => {
                  console.log(data)
@@ -21,10 +24,17 @@ REGISTER EMAIL AND PASSWORD
     
     
     
+    
+    
+    
+     //.
 
 CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
-
-     axios.post('https://apibtc.herokuapp.com/new/btc', { email: email@email.com, password: '333' }, optopns })
+     
+     var dev = { email: email@email.com, password: '333' };
+     var url2 = 'https://apibtc.herokuapp.com/new/btc';
+     
+     axios.post(url2, dev, optopns })
           .then(data => data.data)
           .then(data => {
                  console.log(data)
@@ -38,7 +48,11 @@ CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
 
 
 
-
+          
+          
+          
+          
+          //.
 
 
 CHECK BTC WALLET OR TXID 
@@ -46,8 +60,9 @@ CHECK BTC WALLET OR TXID
 
      var obj = { txId: 'b8c43d628d3a3834f4083fdb43b47a054273292c32c90134af091528512391f9' }
      var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' }  // using txId or wallet => data other
-
-      axios.post('https://apibtc.herokuapp.com/check/btc', obj, options })
+     var url3 = 'https://apibtc.herokuapp.com/check/btc';
+     
+      axios.post(url3, obj, options })
             .then(data => data.data)
             .then(data => {
                     console.log(data)
@@ -59,17 +74,19 @@ CHECK BTC WALLET OR TXID
           
           
           
+          
+          
 
 
 
-
-
+          //.
 
 CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
 
      var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' };
-
-     axios.post('https://apibtc.herokuapp.com/confirm/btc', obj, options })
+     var url4 = 'https://apibtc.herokuapp.com/confirm/btc';
+     
+     axios.post(url4, obj, options })
           .then(data => data.data)
           .then(data => {
                     console.log(data)
@@ -81,7 +98,12 @@ CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
           
 
 
-
+     
+     
+     
+     
+     
+     //. 
 
 
 
@@ -99,9 +121,10 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
                  ];
                  /* { .... 1-50 obj { btc, to }} */
                  
+          var OBJ = {arrFrom: arrFrom, arrTo: arrTo };
+          var utl5 = 'https://apibtc.herokuapp.com/out/btc';
 
-
-     axios.post('https://apibtc.herokuapp.com/out/btc', {arrFrom , arrTo }, options })
+     axios.post(url5, OBJ, options })
           .then(data => data.data)
           .then(data => {
                      console.log(data)
@@ -116,16 +139,28 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 
 
 
+
+
+
+     //.
+
 SUBCRIBE ALL TRANSACTIONS OF BITCOIN
      
      var socket = require("socket.io-client").connect('https://apibtc.herokuapp.com');
-           socket.emit("trans", { name: 'any every thing' });
-           socket.on("trans", data => { 
-                         console.log(data)
-                         // your code here with data object
-           })
+                socket.emit("trans", { name: 'any every thing' });
+                socket.on("trans", data => { 
+                              console.log(data)
+                              // your code here with data object
+                })
       
       
       
+      
+      
+      
+      
+      
+      
+      //.
       
       

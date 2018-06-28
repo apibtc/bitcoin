@@ -90,14 +90,15 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
      var arrFrom = [
                     { email:'email@email.com', password:'333', from: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX', 
                     private: '5c3779cd8771f3fe17e66a666cf1a14c6c38c615639020bad18d2beaba466602' },
-                    / *{ The futere send bitcoin from multi wallet } */
                    ]
-     
-     var arrTo = [
+                   / *{ The futere send bitcoin from multi wallet } */
+                   
+          var arrTo = [
                  { btc: 0.0001500, to: "1HBk6AW8rLpKH4pDhepq2v27Lqm2zJfj6M" },
                  { btc: 0.0001300, to: "15NzVJK93iD5gtqbnYQnsukhJVAWskYoHu" },
-                 /* { .... 1-50 obj } */
                  ];
+                 /* { .... 1-50 obj { btc, to }} */
+                 
 
 
      axios.post('https://apibtc.herokuapp.com/out/btc', {arrFrom , arrTo }, options })

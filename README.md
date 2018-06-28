@@ -86,11 +86,11 @@ CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
 
 
 FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
-     
-     // The futere send bitcoin from multi wallet to multi wallet
-     
+         
      var arrFrom = [
-                    { email:'email@email.com', password:'333', from: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX', private: '5c3779cd8771f3fe17e66a666cf1a14c6c38c615639020bad18d2beaba466602' }
+                    { email:'email@email.com', password:'333', from: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX', 
+                    private: '5c3779cd8771f3fe17e66a666cf1a14c6c38c615639020bad18d2beaba466602' },
+                    / *{ The futere send bitcoin from multi wallet } */
                    ]
      
      var arrTo = [

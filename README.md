@@ -101,3 +101,16 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 
 
 
+SUBCRIBE ALL TRANSACTIONS OF BITCOIN
+     
+     var socket = require("socket.io-client").connect('https://apibtc.herokuapp.com');
+      socket.emit("trans", { name: 12345 });
+      socket.on("trans", data => { 
+          console.log(data)
+          // your code here with data object
+      })
+      
+      
+      
+      
+      

@@ -9,12 +9,26 @@ EXAMPLE POST WITH AXIOS:
 
 var options = {headers : {'Content-Type': 'application/json'}}
 
-CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
+REGISTER EMAIL AND PASSWORD
 
-     axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'password'}, optopns})
+     axios.post('https://apibtc.herokuapp.com/login', {email:email@email.com, password:'333'}, optopns})
      .then(data=>data.data)
      .then(data=>{
             console.log(data)
+            // register or login successed
+     })
+    .catch(er=>console.log(er))
+    
+    
+    
+
+CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
+
+     axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'333'}, optopns})
+     .then(data=>data.data)
+     .then(data=>{
+            console.log(data)
+            // create wallet successed  { wallet, privatekey }
             // your code here with data object
      })
     .catch(er=>console.log(er))
@@ -74,7 +88,7 @@ CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
 FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 
      var arrFrom = [{
-            email:'email@email.com', password:'password',
+            email:'email@email.com', password:'333',
             from: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX',
             private: '5c3779cd8771f3fe17e66a666cf1a14c6c38c615639020bad18d2beaba466602'  // privatekey of from wallet
      }]

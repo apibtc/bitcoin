@@ -2,7 +2,7 @@
 
 
 
-you can post using: axios, ajax, request, reauest-promise, fetch, ....post to url :
+you can post using: axios, ajax, request, request-promise, fetch, ....post to url :
 
 EXAMPLE POST WITH AXIOS:
 

@@ -12,12 +12,12 @@ var options = {headers : {'Content-Type': 'application/json'}}
 REGISTER EMAIL AND PASSWORD
 
      axios.post('https://apibtc.herokuapp.com/login', {email:email@email.com, password:'333'}, optopns})
-     .then(data=>data.data)
-     .then(data=>{
-            console.log(data)
-            // register or login successed
-     })
-    .catch(er=>console.log(er))
+          .then(data=>data.data)
+          .then(data=>{
+                 console.log(data)
+                 // register or login successed
+          })
+         .catch(er=>console.log(er))
     
     
     
@@ -118,11 +118,11 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 SUBCRIBE ALL TRANSACTIONS OF BITCOIN
      
      var socket = require("socket.io-client").connect('https://apibtc.herokuapp.com');
-      socket.emit("trans", { name: 12345 });
-      socket.on("trans", data => { 
-          console.log(data)
-          // your code here with data object
-      })
+           socket.emit("trans", { name: 'any every thing' });
+           socket.on("trans", data => { 
+               console.log(data)
+               // your code here with data object
+           })
       
       
       

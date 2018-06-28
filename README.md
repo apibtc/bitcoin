@@ -13,7 +13,7 @@ var options = {headers : {'Content-Type': 'application/json'}}
      .then(data=>data.data)
      .then(data=>{
             console.log(data)
-            // your code hare with data object
+            // your code here with data object
      })
     .catch(er=>console.log(er))
     
@@ -36,7 +36,7 @@ CHECK BTC WALLET OR TXID
             .then(data=>data.data)
              .then(data=>{
                     console.log(data)
-                    // your code hare with data object
+                    // your code here with data object
              })
           .catch(er=>console.log(er))
           
@@ -58,7 +58,7 @@ CHECK WALLET CONFIRM OF TXID ( working if wallet haved txId in to)
           .then(data=>data.data)
           .then(data=>{
                console.log(data)
-               // your code hare with data object
+               // your code here with data object
           })
           .catch(er=>console.log(er))
           
@@ -89,7 +89,7 @@ FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
           .then(data=>data.data)
           .then(data=>{
                 console.log(data)
-               // your code hare with data object
+               // your code here with data object
           })
      .catch(er=>console.log(er))
 

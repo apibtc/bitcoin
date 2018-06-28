@@ -30,10 +30,8 @@ CREATE NEW WALLET AND PRIVATEKEY (UNLIMITED)
 CHECK BTC WALLET OR TXID 
 
 
-     var obj = {
-               wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' || null,
-               txId: 'b8c43d628d3a3834f4083fdb43b47a054273292c32c90134af091528512391f9' || null
-               }
+     var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' || null,
+                 txId: 'b8c43d628d3a3834f4083fdb43b47a054273292c32c90134af091528512391f9' || null }
 
       axios.post('https://apibtc.herokuapp.com/check/btc', obj, options })
             .then(data=>data.data)
@@ -55,7 +53,7 @@ CHECK BTC WALLET OR TXID
 
 CHECK WALLET CONFIRM OF TXID ( working if wallet haved bitcoin > 0 )
 
-     var obj = {wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX'};
+     var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' };
 
      axios.post('https://apibtc.herokuapp.com/confirm/btc', obj, options })
           .then(data=>data.data)

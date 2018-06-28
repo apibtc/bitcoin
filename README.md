@@ -1,31 +1,31 @@
+
 create new wallet bitcoin and privatekey:
+
 you can post using: axios, ajax, request, reauest-promise, fetch, ....post to url :
 
-EXAMPLE POST WITH AXIOS
+EXAMPLE POST WITH AXIOS:
+
 
 var options = {headers : {'Content-Type': 'application/json'}}
 
 
      axios.post('https://apibtc.herokuapp.com/new/btc', {email:email@email.com, password:'password'}, optopns})
-
      .then(data=>data.data)
-
      .then(data=>{
-
             console.log(data)
-
             // your code hare with data object
-
      })
-
     .catch(er=>console.log(er))
+    
+    
+    
 
 
 
 
 
 
-///////////  C H E C K    B T C   W A L L E T   O R  T X I D /////////// 
+CHECK BTC WALLET OR TXID 
 
 
      var obj = {wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' || null,
@@ -34,86 +34,61 @@ var options = {headers : {'Content-Type': 'application/json'}}
       axios.post('https://apibtc.herokuapp.com/check/btc', obj, options })
 
             .then(data=>data.data)
-
-
              .then(data=>{
-
-
                     console.log(data)
                     // your code hare with data object
-
-
              })
-
-
           .catch(er=>console.log(er))
+          
+          
+          
+          
+          
 
 
 
 
 
 
-/////// C H E C K   W A L L E T   C O N F I R M    T X  ///////// ( working if wallet haved txid in to )
-
+CHECK WALLET CONFIRM OF TXID ( working if wallet haved txId in to)
 
      axios.post('https://apibtc.herokuapp.com/confirm/btc', obj, options })
-
           .then(data=>data.data)
-
           .then(data=>{
-
                console.log(data)
                // your code hare with data object
-
           })
-
           .catch(er=>console.log(er))
+          
+          
+          
 
 
 
 
-/////// S E N D     B I T C O I N    F R O M   1  W A L L E T     T O  1-50  W A L L E T ////
+
+
+FROM 1 WALLET SEND BITCOIN TO MULTI WALLET (1-50)
 
      var arrFrom = [{
-
             email:'email@email.com', password:'password',
-
             from: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX',
-
             private: '5c3779cd8771f3fe17e66a666cf1a14c6c38c615639020bad18d2beaba466602'  // privatekey of from wallet
-
      }]
 
      var arrTo = [
-
             { btc: 0.00001500, to: "1HBk6AW8rLpKH4pDhepq2v27Lqm2zJfj6M" },
-
-
             { btc: 0.00001300, to: "15NzVJK93iD5gtqbnYQnsukhJVAWskYoHu" },
-
             /* { .... 1-50 obj } */
-
      ];
 
 
-
      axios.post('https://apibtc.herokuapp.com/out/btc', {arrFrom , arrTo }, options })
-
-
           .then(data=>data.data)
-
-
           .then(data=>{
-
-
                 console.log(data)
-
-
                // your code hare with data object
-            
           })
-
-
      .catch(er=>console.log(er))
 
 

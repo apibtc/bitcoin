@@ -2,12 +2,12 @@
 
 
 
-you can post using: axios, ajax, request, request-promise, fetch, ....post to url :
+you can post using: axios, ajax, request, request-promise, fetch, ....post to url:
 
 EXAMPLE POST WITH AXIOS:
 
 
-var options = {headers : {'Content-Type': 'application/json'}}
+var options = { headers : { 'Content-Type': 'application/json' }};
 
 REGISTER EMAIL AND PASSWORD
 
@@ -45,7 +45,7 @@ CHECK BTC WALLET OR TXID
 
 
      var obj = { txId: 'b8c43d628d3a3834f4083fdb43b47a054273292c32c90134af091528512391f9' }
-     var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' }  // using txId or wallet => data ather
+     var obj = { wallet: '17A16QmavnUfCW11DAApiJxp7ARnxN5pGX' }  // using txId or wallet => data other
 
       axios.post('https://apibtc.herokuapp.com/check/btc', obj, options })
             .then(data => data.data)
